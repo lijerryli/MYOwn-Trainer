@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:text="Percent to Perfection:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/percentText"
+        android:textSize="30dp"
+        android:layout_marginTop="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#424242" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="_"
+        android:id="@+id/countDown"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:singleLine="false"
+        android:textIsSelectable="true"
+        android:textColor="#009688"
+        android:textSize="94dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Feedback: "
+        android:id="@+id/feedbackText"
+        android:textSize="25dp"
+        android:textColor="#607D8B"
+        android:layout_above="@+id/countDown"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp" />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/homeButton"
+        android:src="@drawable/home"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="78dp"
+        android:layout_below="@+id/countDown"
+        android:layout_alignParentStart="true"
+        android:clickable="true" />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/restartButton"
+        android:src="@drawable/restart"
+        android:layout_marginEnd="69dp"
+        android:layout_alignTop="@+id/homeButton"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="45%"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:id="@+id/textView2"
+        android:textSize="80dp"
+        android:layout_alignStart="@+id/percentText"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_above="@+id/feedbackText"
+        android:layout_below="@+id/percentText"
+        android:textColor="#009688" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView3"
+        android:layout_alignStart="@+id/homeButton"
+        android:layout_above="@+id/homeButton"
+        android:layout_alignEnd="@+id/restartButton"
+        android:textIsSelectable="false"
+        android:textSize="25dp"
+        android:layout_below="@+id/feedbackText"
+        android:textColor="#80CBC4" />
+
+
+</RelativeLayout>

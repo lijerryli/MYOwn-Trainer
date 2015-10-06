@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.example.jerry.myodata"
+        minSdkVersion 19
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+dependencies {
+    repositories {
+        mavenCentral()
+        maven {
+            // this must point to the myorepository distributed with the Myo SDK
+            url '../../myorepository'
+        }
+    }
+
+    compile 'com.thalmic:myosdk:0.10.0@aar'
+    compile 'com.jjoe64:graphview:4.0.0'
+}
+
